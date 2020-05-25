@@ -1,0 +1,5 @@
+<%- await include('views/shared/header.ejs', { title: title }) %>
+    <a href=<%= '/tour/' + itemCodeName + '?fileName=' + fileName %>>
+        <img class='vr-thumb' src=<%= '/' + thumb %> />
+    </a>
+<%- await include('views/shared/footer.ejs') %>
