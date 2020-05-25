@@ -1,5 +1,8 @@
 <%- await include('views/shared/header.ejs', { title: title }) %>
-    <a href=<%= '/tour/' + itemCodeName + '?fileName=' + fileName %>>
-        <img class='vr-thumb' src=<%= '/' + thumb %> />
+<% tours.forEach(t => { %>
+    <h1><%- t.name %></h1>
+    <a href=<%= '/tour/' + item.system.codename + '/' + t.codename %>>
+        <img class='vr-thumb' src=<%= t.url %> />
     </a>
+<% }); %>
 <%- await include('views/shared/footer.ejs') %>

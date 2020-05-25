@@ -1,9 +1,19 @@
 <%- await include('views/shared/header.ejs', { title: title }) %>
-    <script src="../assets/three.min.js"></script>
-    <script src="../assets/panolens.min.js"></script>
+    <script src="../../assets/three.min.js"></script>
+    <script src="../../assets/panolens.min.js"></script>
     <script>
-        const panorama = new PANOLENS.ImagePanorama('<%= `../assets/tour/${path}` %>');
+        const panorama = new PANOLENS.ImagePanorama('<%= `../../assets/tour/${path}` %>');
         const viewer = new PANOLENS.Viewer();
         viewer.add(panorama);
     </script>
+
+    <% infopoints.forEach(i => { %>
+        <div id="popup-<%= i.codename %>" class="tour-popup"><%- i.description %></div>
+        <script>
+            infospot = new PANOLENS.Infospot();
+            infospot.position.set(<%= i.x %>, <%= i.y %>, <%= i.z %>);
+            infospot.addHoverElement(document.getElementById('popup-<%= i.codename %>'), 200);
+            panorama.add(infospot);
+        </script>
+    <% }); %>
 <%- await include('views/shared/footer.ejs') %>

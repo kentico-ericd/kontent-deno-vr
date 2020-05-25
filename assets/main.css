@@ -1,11 +1,23 @@
 body {
     background-color: rgb(179, 179, 179);
+    font-family: 'Times New Roman', Times, serif;
 }
 
-img.vr-thumb {
+.vr-thumb {
     width: 20%;
 }
 
-img.property-thumb {
+.property-thumb {
     width: 20%;
+}
+
+.panolens-infospot {
+    font-size: 28pt;
+}
+
+.tour-popup {
+    font-size: 28pt;
+    display: none;
+    background-color: #fff;
+    padding: 20px;
 }
