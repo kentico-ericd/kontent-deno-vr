@@ -1,8 +1,21 @@
 <%- await include('views/shared/header.ejs', { title: title }) %>
 <% tours.forEach(t => { %>
-    <h1><%- t.name %></h1>
-    <a href=<%= '/tour/' + item.system.codename + '/' + t.codename %>>
-        <img class='vr-thumb' src=<%= t.url %> />
-    </a>
+    <div class="grid-x">
+        <div class="cell auto"></div>
+        <div class="align-center cell small-12 medium-10 large-8">
+            <div class="header-2"><%- t.name %></div>
+            <a href=<%= '/tour/' + item.system.codename + '/' + t.codename %>>
+                <img class='vr-thumb' src=<%= t.url %> />
+            </a>
+        </div>
+        <div class="cell auto"></div>
+    </div>
+    <div class="grid-x">
+        <div class="cell auto"></div>
+        <div class="license align-center cell small-2 medium-2 large-2">
+            <%- t.credit %>
+        </div>
+        <div class="cell auto"></div>
+    </div>
 <% }); %>
 <%- await include('views/shared/footer.ejs') %>

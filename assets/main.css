@@ -1,22 +1,82 @@
 body {
-    background-color: rgb(179, 179, 179);
-    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(238, 238, 238);
+    font-family: "Source Sans Pro", "Segoe UI", sans-serif;
+    font-size: 1vw;
+    margin: 0;
+}
+
+canvas {
+    display: block;
+}
+
+#searchBox {
+    margin: auto;
+    margin-top: 5px;
+}
+
+.header-3 {
+    font-size: 3vw;
+}
+
+.header-2 {
+    font-size: 2vw;
+}
+
+.header {
+    color: rgb(238, 238, 238);
+    margin-bottom: 40px;
+    padding: 10px 0px;
+    background-color: #444;
+}
+
+.home-link {
+    color: rgb(238, 238, 238);
+    font-size: 2.6vw;
+}
+
+.home-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 100px 0px;
+    background-color: #444;
+}
+
+.kentico {
+    color: #F05A22;
+    text-align: center;
+}
+
+.license img {
+    float: left;
+    margin-right: 2px;
+    width: 1vw;
+    height: 1vw;
 }
 
 .vr-thumb {
-    width: 20%;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.align-center {
+    text-align: center;
 }
 
 .property-thumb {
-    width: 20%;
+    width: 60%;
+    margin-bottom: 20px;
 }
 
 .panolens-infospot {
-    font-size: 28pt;
+    font-size: 16pt;
 }
 
 .tour-popup {
-    font-size: 28pt;
+    font-size: 16pt;
     display: none;
     background-color: #fff;
     padding: 20px;

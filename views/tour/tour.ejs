@@ -1,19 +1,31 @@
-<%- await include('views/shared/header.ejs', { title: title }) %>
-    <script src="../../assets/three.min.js"></script>
-    <script src="../../assets/panolens.min.js"></script>
-    <script>
-        const panorama = new PANOLENS.ImagePanorama('<%= `../../assets/tour/${path}` %>');
-        const viewer = new PANOLENS.Viewer();
-        viewer.add(panorama);
-    </script>
-
-    <% infopoints.forEach(i => { %>
-        <div id="popup-<%= i.codename %>" class="tour-popup"><%- i.description %></div>
+<html class="no-js" lang="en">
+    <head>
+        <script src="../../assets/three.min.js"></script>
+        <script src="../../assets/panolens.min.js"></script>
+        <link rel="stylesheet" href="/assets/main.css" />
+        <style>
+            body {
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
         <script>
-            infospot = new PANOLENS.Infospot();
-            infospot.position.set(<%= i.x %>, <%= i.y %>, <%= i.z %>);
-            infospot.addHoverElement(document.getElementById('popup-<%= i.codename %>'), 200);
-            panorama.add(infospot);
+            const panorama = new PANOLENS.ImagePanorama('<%= `../../assets/tour/${path}` %>');
+            const viewer = new PANOLENS.Viewer({
+                autoHideInfospot: false,
+                output: 'overlay'
+            });
+            viewer.add(panorama);
         </script>
-    <% }); %>
-<%- await include('views/shared/footer.ejs') %>
+        <% infopoints.forEach(i => { %>
+            <div id="popup-<%= i.codename %>" class="tour-popup"><%- i.description %></div>
+            <script>
+                infospot = new PANOLENS.Infospot();
+                infospot.position.set(<%= i.x %>, <%= i.y %>, <%= i.z %>);
+                infospot.addHoverElement(document.getElementById('popup-<%= i.codename %>'), 200);
+                panorama.add(infospot);
+            </script>
+        <% }); %>
+    </body>
+</html>

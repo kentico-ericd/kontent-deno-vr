@@ -1,8 +1,21 @@
 <%- await include('views/shared/header.ejs', { title: title }) %>
+
     <% if (properties.length > 0) {
-        for(const property of properties) { %>
-            <h2><%= property.elements.title.value %></h2>
-            <img class="property-thumb" src=<%= property.elements.thumbnail.value[0].url %> />
-            <a href=<%= "/listing/" + property.system.codename %>>Read more</a>
-    <% }} %>
+        properties.forEach(property => { %>
+            <div class="grid-x">
+                <div class="cell auto"></div>
+                <div class="align-center cell small-10 medium-10 large-8">
+                    <div class="header-3"><%= property.title %></div>
+                    <p><%= property.address %></p>
+                    <div class="kentico header-3">$<%= property.price %></div>
+                    <a href=<%= "/listing/" + property.codename %>>
+                        <img class="property-thumb" src=<%= property.thumb %> />
+                    </a>
+                    <%- property.description %>
+                    <p><a href=<%= "/listing/" + property.codename %>>Virtual tour</a></p>
+                </div>
+                <div class="cell auto"></div>
+            </div>
+    <% }); } %>
+</div>
 <%- await include('views/shared/footer.ejs') %>

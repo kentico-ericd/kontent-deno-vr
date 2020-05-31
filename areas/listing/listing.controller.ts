@@ -26,6 +26,7 @@ const makeTours = async (response: any) => {
         return {
             name: m.system.name,
             codename: m.system.codename,
+            credit: m.elements.credit.value,
             url: m.elements.panoramic_image.value[0].url,
             file: m.elements.panoramic_image.value[0].name
         }
