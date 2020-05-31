@@ -3,7 +3,7 @@
 ### Installation
 
 1. [Install Deno](https://deno.land/#installation) and clone this repo.
-2. Create a new blank project in Kontent, then [download the template](/kontent-deno-vr-template.zip).
+2. Create a new blank project in Kontent, then [download the template](https://github.com/kentico-ericd/kontent-deno-vr/raw/master/kontent-deno-vr-template.zip).
 3. Import the template via [Kontent Template Manager](https://kentico.github.io/kontent-template-manager/import) using the __Project ID__ and __Management API Key__ found in Project Settings > API Keys.
 4. After importing, ensure that all content items in the project are Published
 5. Connect the application to your project by creating a `.env` file and adding your __Project ID__:   
