@@ -23,3 +23,5 @@ There is also a VR implementation using equirectangular images, [three.js](https
 The image can be viewed on a computer by dragging the mouse, but also supports viewing on mobile devices supporting stereoscopic images such as Google Cardboard.
 
 Each Tour can also have any number of Infopoints, which are three-dimensional Points of Interest superimposed on the image. They can contain text, images, and links which highlight important parts of the property.
+
+![Analytics](https://kentico-ga-beacon.azurewebsites.net/api/UA-69014260-4/kentico-ericd/kontent-deno-vr?pixel)
