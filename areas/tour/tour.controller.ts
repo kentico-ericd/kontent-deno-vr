@@ -1,5 +1,5 @@
 import getContentItem from '../../api/getContentItem.ts';
-import { Controller, View, Get, Param } from 'https://deno.land/x/alosaur/src/mod.ts';
+import { Controller, View, Get, Param } from 'https://deno.land/x/alosaur/mod.ts';
 
 @Controller()
 export class TourController {

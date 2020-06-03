@@ -1,4 +1,4 @@
-import { Controller, View, Get, QueryParam } from 'https://deno.land/x/alosaur/src/mod.ts';
+import { Controller, View, Get, QueryParam } from 'https://deno.land/x/alosaur/mod.ts';
 import getContentItems from '../../api/getContentItems.ts';
 
 @Controller()

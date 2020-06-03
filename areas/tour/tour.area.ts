@@ -1,4 +1,4 @@
-import { Area } from 'https://deno.land/x/alosaur/src/mod.ts';
+import { Area } from 'https://deno.land/x/alosaur/mod.ts';
 import { TourController } from './tour.controller.ts';
 
 @Area({

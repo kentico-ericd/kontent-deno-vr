@@ -1,4 +1,4 @@
-import { Controller, View, Get, Param } from 'https://deno.land/x/alosaur/src/mod.ts';
+import { Controller, View, Get, Param } from 'https://deno.land/x/alosaur/mod.ts';
 import getContentItem from '../../api/getContentItem.ts';
 import downloadAsset from '../../api/downloadAsset.ts';
 import { exists } from 'https://deno.land/std/fs/exists.ts';

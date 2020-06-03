@@ -1,9 +1,9 @@
 import { renderFile } from 'https://deno.land/x/dejs/mod.ts';
-import { normalize } from 'https://raw.githubusercontent.com/alosaur/alosaur/master/src/package.ts';
+import { normalize } from 'https://deno.land/x/alosaur/src/deps.ts';
 import { HomeArea } from './areas/home/home.area.ts';
 import { TourArea } from './areas/tour/tour.area.ts';
 import { ListingArea } from './areas/listing/listing.area.ts';
-import { App, ViewRenderConfig } from 'https://deno.land/x/alosaur/src/mod.ts';
+import { App, ViewRenderConfig } from 'https://deno.land/x/alosaur/mod.ts';
 
 const appSettings = {
     areas: [HomeArea, ListingArea, TourArea],
