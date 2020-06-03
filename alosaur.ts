@@ -1,5 +1,5 @@
 import { renderFile } from 'https://deno.land/x/dejs/mod.ts';
-import { normalize } from 'https://raw.githubusercontent.com/alosaur/alosaur/master/src/package.ts';
+import { normalize } from 'https://deno.land/x/alosaur/mod.ts';
 import { HomeArea } from './areas/home/home.area.ts';
 import { TourArea } from './areas/tour/tour.area.ts';
 import { ListingArea } from './areas/listing/listing.area.ts';
