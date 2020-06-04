@@ -10,7 +10,7 @@ import getContentItems from "../../api/getContentItems.ts";
 export class HomeController {
   properties = [];
 
-  @Get()
+  @Get("/")
   async text(@QueryParam("q") q: string) {
     if (this.properties.length === 0) {
       // data isn't cached- load from API
