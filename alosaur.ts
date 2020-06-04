@@ -1,5 +1,6 @@
 import { renderFile } from "https://deno.land/x/dejs/mod.ts";
 import { normalize } from "https://deno.land/x/alosaur/src/deps.ts";
+import { parse } from "https://deno.land/std/flags/mod.ts";
 import { HomeArea } from "./areas/home/home.area.ts";
 import { TourArea } from "./areas/tour/tour.area.ts";
 import { ListingArea } from "./areas/listing/listing.area.ts";
@@ -22,4 +23,7 @@ app.useViewRender({
     renderFile(normalize(`${config.basePath}${path}.ejs`), model),
 });
 
-app.listen();
+const DEFAULT_PORT = "8000";
+const argPort = parse(Deno.args).port;
+const port = argPort ? String(argPort) : DEFAULT_PORT;
+app.listen(`:${port}`);
