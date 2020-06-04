@@ -9,7 +9,7 @@
 5. Connect the application to your project by creating a `.env` file and adding your __Project ID__:   
 `PROJECT_ID=79ef36c6-e9aa-0100-8ead-3ec7363e98d6`
 6. Run the project by entering the following command  
-`deno run --allow-net --allow-write --allow-read --allow-env --config ./tsconfig.app.json alosaur.ts`
+`deno run --allow-net --allow-write --allow-read --allow-env --config ./tsconfig.json alosaur.ts`
 7. You can now access the site at `localhost:8000`.
 
 ### Website features

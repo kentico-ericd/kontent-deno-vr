@@ -1,0 +1,1 @@
+web: deno run --alow-write --allow-read --allow-env --config ./tsconfig.json --allow-net=:${PORT} --cached-only --port=${PORT} alosaur.ts
