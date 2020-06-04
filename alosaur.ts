@@ -4,7 +4,6 @@ import { HomeArea } from "./areas/home/home.area.ts";
 import { TourArea } from "./areas/tour/tour.area.ts";
 import { ListingArea } from "./areas/listing/listing.area.ts";
 import { App, ViewRenderConfig } from "https://deno.land/x/alosaur/mod.ts";
-import { config } from "https://deno.land/x/dotenv/mod.ts";
 
 const appSettings = {
   areas: [HomeArea, ListingArea, TourArea],
@@ -23,8 +22,4 @@ app.useViewRender({
     renderFile(normalize(`${config.basePath}${path}.ejs`), model),
 });
 
-const DEFAULT_PORT = ":8000";
-const envPort = config().PORT;
-const port = envPort ? String(envPort) : DEFAULT_PORT; 
-
-app.listen(port);
+app.listen();
