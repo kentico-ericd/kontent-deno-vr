@@ -20,10 +20,25 @@
         </script>
         <% infopoints.forEach(i => { %>
             <div id="popup-<%= i.codename %>" class="tour-popup"><%- i.description %></div>
-            <script>
-                infospot = new PANOLENS.Infospot();
-                infospot.position.set(<%= i.x %>, <%= i.y %>, <%= i.z %>);
-                infospot.addHoverElement(document.getElementById('popup-<%= i.codename %>'), 200);
+            <script>       
+                <% if(i.transition !== '') { %>
+                    // Load infospot with arrow if transition
+                    infospot = new PANOLENS.Infospot(300, PANOLENS.DataImage.Arrow, true);
+
+                    infospot.position.set(<%= i.x %>, <%= i.y %>, <%= i.z %>);
+                    infospot.addHoverElement(document.getElementById('popup-<%= i.codename %>'), 200);
+
+                    infospot.element.setAttribute('data-transition', '<%= i.transition %>');
+                    infospot.addEventListener('click', (e) => {
+                        location.href = e.target.element.getAttribute('data-transition');
+                    });
+                <% } else { %>
+                    // Load regular infospot
+                    infospot = new PANOLENS.Infospot();
+                    infospot.position.set(<%= i.x %>, <%= i.y %>, <%= i.z %>);
+                    infospot.addHoverElement(document.getElementById('popup-<%= i.codename %>'), 200);
+                <% } %>
+
                 panorama.add(infospot);
             </script>
         <% }); %>

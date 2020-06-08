@@ -5,8 +5,6 @@ import {
   Param,
 } from "https://deno.land/x/alosaur/mod.ts";
 import getContentItem from "../../api/getContentItem.ts";
-import downloadAsset from "../../api/downloadAsset.ts";
-import { exists } from "https://deno.land/std/fs/exists.ts";
 
 @Controller()
 export class ListingController {
@@ -37,18 +35,5 @@ const makeTours = async (response: any) => {
     };
   });
 
-  // download panoramic images locally
-  for (const t of tours) {
-    download(t, response.item.system.codename);
-  }
-
   return tours;
-};
-
-const download = async (tour: any, codename: string) => {
-  const path = `assets/tour/${codename}`;
-  const file = `${path}/${tour.file}`;
-  if (!await exists(file)) {
-    await downloadAsset(tour.url, path, file);
-  }
 };
