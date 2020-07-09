@@ -18,7 +18,7 @@ This repo illustrates a basic real estate website built on Deno and uses pure RE
 
 There is also a VR implementation using equirectangular images, [three.js](https://threejs.org/), and [panolens.js](https://pchen66.github.io/Panolens/). When viewing a property on the site, you can click on a Tour to open a panoramic 360&deg; image.
 
-![vr](/vr.jpg)
+![vr](/source/vr.jpg)
 
 The image can be viewed on a computer by dragging the mouse, but also supports viewing on mobile devices supporting stereoscopic images such as Google Cardboard.
 
